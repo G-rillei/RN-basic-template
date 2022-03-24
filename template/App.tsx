@@ -6,19 +6,12 @@ import {
 } from 'react-native';
 import Navigation from './project/app/navigation';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <Navigation />
     </SafeAreaView>
